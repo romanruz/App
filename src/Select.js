@@ -8,8 +8,8 @@ class Select extends Component {
 constructor(props){
   super(props);
   this.state = {
-    value:'USD', 
-    USD:{bitcoinPrice:''} 
+    value:'USD',
+    USD:{bitcoinPrice:''}
   };
 }
 componentWillMount() {
@@ -26,7 +26,7 @@ componentWillMount() {
                 etheriumPrice:this.getApi(coin,'EUR',1027),
                 ripplePrice:this.getApi(coin,'EUR',52),
                 cardanoPrice:this.getApi(coin,'EUR',2010),
-                litecoinePrice:this.getApi(coin,'EUR',2)} 
+                litecoinePrice:this.getApi(coin,'EUR',2)}
         });
       })
   axios.get(`https://api.coinmarketcap.com/v2/ticker/?convert=RUB`)
@@ -41,25 +41,28 @@ componentWillMount() {
           litecoinePrice:this.getApi(rubapi,'RUB',2),
     }
       })
-      
+
     })
   }
 
 onChangeHandler = (e)=>{
-  this.setState({value:e.target.value});  
+  this.setState({value:e.target.value});
 }
 criptoCurrencyCalc = (currency,cripta)=>{
 
   if(currency === 'USD'){
     //тут буду выяснять курс и тип крипты
-    return this.state.USD[cripta]
+    let value = +this.state.USD[cripta]
+    return value.toFixed(3)
   }
   if(currency === 'EURO'){
-    return this.state.EURO[cripta]
+    let value = +this.state.EURO[cripta]
+    return value.toFixed(3)
 
   }
   if(currency === 'RUB'){
-    return this.state.RUB[cripta]
+    let value = +this.state.RUB[cripta]
+    return value.toFixed(3)
   }
 }
 getApi = (json,currency,currencyId)=>{
@@ -105,18 +108,18 @@ if (this.convertSelect.value === 'title'){
         <div className='wrapper'>
          <div className='selectWrap'>
             <select className='selectValue' onChange={this.onChangeHandler}>
-              <option value="title" disable>Choose currency here</option>
+              <option value="USD" disable>Choose currency here</option>
               <option value="USD">USD</option>
               <option value="EURO">EURO</option>
               <option value="RUB">RUB</option>
             </select>
           </div>
             <div className='span'>
-              <span>Bitcoin:{`${this.criptoCurrencyCalc(this.state.value,'bitcoinPrice')},`}</span>
-              <span>Etherium:{`${this.criptoCurrencyCalc(this.state.value,'etheriumPrice')},`}</span>
-              <span>Ripple:{`${this.criptoCurrencyCalc(this.state.value,'ripplePrice')},`}</span> 
-              <span>Cardano:{`${this.criptoCurrencyCalc(this.state.value,'cardanoPrice')},`}</span>
-              <span>LiteCoine:{`${this.criptoCurrencyCalc(this.state.value,'litecoinePrice')};`}</span>
+              <span>Bitcoin:{`${this.criptoCurrencyCalc(this.state.value,'bitcoinPrice')} ${this.state.value};`}</span>
+              <span>Etherium:{`${this.criptoCurrencyCalc(this.state.value,'etheriumPrice')} ${this.state.value};`}</span>
+              <span>Ripple:{`${this.criptoCurrencyCalc(this.state.value,'ripplePrice')} ${this.state.value};`}</span>
+              <span>Cardano:{`${this.criptoCurrencyCalc(this.state.value,'cardanoPrice')} ${this.state.value};`}</span>
+              <span>LiteCoine:{`${this.criptoCurrencyCalc(this.state.value,'litecoinePrice')} ${this.state.value};`}</span>
             </div>
             <div className='calcWrapper'>
               <div className='valueInputWrapper'>
@@ -142,7 +145,7 @@ if (this.convertSelect.value === 'title'){
             <h3>Bitcoin Online currency:</h3>
             <Chart />
           </div>
-        </div>    
+        </div>
     );
   }
 }

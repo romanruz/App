@@ -25,18 +25,27 @@ body {
 }
 
 .selectValue {
-	font: 11pt/9pt Inconsolata;
-    text-align-last: center;
-    width: 175px;
-    height: 26px;
+		padding:5px 33px;
+		text-align-last: center;
+		font: 11pt/9pt Inconsolata;
     outline: none;
     border-radius: 10px;
     border-width: 2px;
     border-color: #4bc0c0;
     -webkit-appearance: none;
-    /*background-image: url('/images/stories/select-arrow-pink.png');*/
-   /* background-position: right center;
-    background-repeat: no-repeat;*/
+		background-image:
+    linear-gradient(45deg, transparent 50%, #4bc0c0 60%),
+    linear-gradient(135deg, #4bc0c0 40%, transparent 50%) !important;
+  	background-position:
+    calc(100% - 16px) 10px,
+    calc(100% - 6px) 10px,
+    100% 0;
+  	background-size:
+    10px 10px,
+    10px 10px;
+  	background-repeat: no-repeat;
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
     line-height: 1em;
     /* for FF */
     -moz-appearance: none;
@@ -117,18 +126,25 @@ border-radius: 10px;
 background-color: #b7e6e6;
 }
 .SelectArchive{
-	font: 11pt/9pt Inconsolata;
 	text-align-last: center;
-    width: 130px;
-    height: 26px;
+	font: 11pt/9pt Inconsolata;
+		padding: 5px 33px;
     outline: none;
     border-radius: 10px;
     border-width: 2px;
     border-color: #4bc0c0;
     -webkit-appearance: none;
-    /*background-image: url('/images/stories/select-arrow-pink.png');*/
-   /* background-position: right center;
-    background-repeat: no-repeat;*/
+		background-image:
+    linear-gradient(45deg, transparent 50%, #4bc0c0 60%),
+    linear-gradient(135deg, #4bc0c0 40%, transparent 50%) !important;
+  	background-position:
+    calc(100% - 16px) 10px,
+    calc(100% - 6px) 10px,
+    100% 0;
+  	background-size:
+    10px 10px,
+    10px 10px;
+  	background-repeat: no-repeat;
     line-height: 1em;
     /* for FF */
     -moz-appearance: none;
