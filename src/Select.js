@@ -115,10 +115,10 @@ if (this.convertSelect.value === 'title'){
             </select>
           </div>
             <div className='span'>
-              <span>Bitcoin:{`${this.criptoCurrencyCalc(this.state.value,'bitcoinPrice')} ${this.state.value};`}</span>
-              <span>Etherium:{`${this.criptoCurrencyCalc(this.state.value,'etheriumPrice')} ${this.state.value};`}</span>
-              <span>Ripple:{`${this.criptoCurrencyCalc(this.state.value,'ripplePrice')} ${this.state.value};`}</span>
-              <span>Cardano:{`${this.criptoCurrencyCalc(this.state.value,'cardanoPrice')} ${this.state.value};`}</span>
+              <span>Bitcoin:{`${this.criptoCurrencyCalc(this.state.value,'bitcoinPrice')} ${this.state.value};`}</span><br className = 'spanBr'/>
+              <span>Etherium:{`${this.criptoCurrencyCalc(this.state.value,'etheriumPrice')} ${this.state.value};`}</span><br className = 'spanBr'/>
+              <span>Ripple:{`${this.criptoCurrencyCalc(this.state.value,'ripplePrice')} ${this.state.value};`}</span><br className = 'spanBr'/>
+              <span>Cardano:{`${this.criptoCurrencyCalc(this.state.value,'cardanoPrice')} ${this.state.value};`}</span><br className = 'spanBr'/>
               <span>LiteCoine:{`${this.criptoCurrencyCalc(this.state.value,'litecoinePrice')} ${this.state.value};`}</span>
             </div>
             <div className='calcWrapper'>

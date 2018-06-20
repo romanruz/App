@@ -70,7 +70,7 @@ class SelectArchive extends Component {
               maintainAspectRatio: true
             }}
           />
-          </div>    
+          </div>
 		)
 	}
 }

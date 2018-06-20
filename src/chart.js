@@ -10,7 +10,7 @@ class Chart extends Component {
   };
   handleData(data) {
     let result = JSON.parse(data);
-    this.time.push(new Date(result.timestampms).toLocaleTimeString()) 
+    this.time.push(new Date(result.timestampms).toLocaleTimeString())
   		if(this.time.length>20){
 		 	this.time.shift()
 		 }
