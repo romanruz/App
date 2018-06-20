@@ -164,6 +164,12 @@ h3 {
 .spanBr{
 	display: none;
 }
+.spanInfo{
+	font: 17pt/20pt Inconsolata;
+	margin-top: 10px;
+	color: red;
+	display: none;
+}
 @media only screen and (max-width:555px){
 	.header {
 	    font: 12pt  Inconsolata;
@@ -174,8 +180,8 @@ h3 {
 	    color: white;
 	    margin-bottom: 15px;
 	}
-	canvas{
-		height: 300px;
+	.spanInfo{
+		display: inline-block;
 	}
 }
 @media only screen and (max-width:1100px){

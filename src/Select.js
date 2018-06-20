@@ -140,6 +140,7 @@ if (this.convertSelect.value === 'title'){
               <br/>
             <span ref={(span)=>this.span = span}></span>
             </div>
+            <span className ='spanInfo'>To see graphs normally, rotate devise to landscape mode</span>
             <h3>Bitcoin History currency:</h3>
             <SelectArchive />
             <h3>Bitcoin Online currency:</h3>
